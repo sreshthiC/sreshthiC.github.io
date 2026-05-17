@@ -22,7 +22,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 0; }
 
   body {
     background: var(--cream);
@@ -2000,6 +2000,8 @@ outline-offset: 6px;
 <a href="#hero" class="scroll-top" id="scrollTop" aria-label="Back to top">↑</a>
 
 <script>
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
 // ── CUSTOM CURSOR ──
 const cursor = document.getElementById('cursor');
 const cursorRing = document.getElementById('cursorRing');
